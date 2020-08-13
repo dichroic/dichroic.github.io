@@ -146,11 +146,11 @@
                                 max-width:1200px !important;
                         }
                         @include tablet{
-                                margin:0 100px;
+                                padding:0 100px;
                                 max-width:960px;
                         }
                         @include phone{
-                                margin:0 40px;
+                                padding:0 40px;
                         }
                 }
                 @include tablet{
@@ -227,11 +227,11 @@
                                 max-width:1200px !important;
                         }
                         @include tablet{
-                                margin:0 100px;
+                                padding:0 100px;
                                 max-width:960px;
                         }
                         @include phone{
-                                margin:0 40px;
+                                padding:0 40px;
                         }   
                 }  
         }
