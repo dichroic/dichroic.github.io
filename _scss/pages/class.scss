@@ -9,27 +9,28 @@
                 font-size:16px;
                 letter-spacing: 0.02em; 
                 &::before{
-                        padding-right:0px;
+                        padding-right:0px !important;
                 }
                 &:not(:last-child){
                         margin-right:10px;
                 }
                 button{
                         width:100%;
-                        border-bottom: 1px dotted $black;
+                        border: 1px solid rgba(0,0,0,0.5);
+                        color:rgba(0,0,0,0.5);
                         line-height: inherit;
                         font-family:inherit;
                         font-size:inherit;
                         &:hover{
                                 cursor:pointer;
                                 color:$highlight;
-                                border-bottom: 1px dotted $highlight;
+                                border: 1px solid $highlight;
                         }
                         &:active,
                         &:focus,
                         &.active{
                                 color:$highlight;
-                                border-bottom: 1px dotted $highlight;
+                                border: 1px solid $highlight;
                                 background-color:yellow;
                         }
                         text-align:left;
@@ -56,10 +57,16 @@
          div[class^="tab-content-item-"] {
                 @include flexbox();
                 @include justify-content(center);
+                @include align-items(flex-start);
          }
         .tab-content-item-image{
                 width:35%;
                 float:left;
+                img{
+                        width:100%;
+                        height:auto;
+                        max-height: 600px;
+                }
         }
         .tab-content-item-code{
                 width:65%;
@@ -211,7 +218,7 @@
                 }
         }
         p,li{
-                margin-bottom:10px;
+                margin-bottom:20px;
         }
         .image-container{
                 position:relative;
@@ -224,6 +231,7 @@
         .class-tips{
                 ul, 
                 > p{
+                        width:100%;
                         @include big-desktop{
                                 max-width:1200px !important;
                         }
@@ -243,15 +251,19 @@
                 @include flex-wrap(wrap);
                 @include justify-content(space-evenly);
                 .card{
-                        width:100%;
-                        height: 400px;
+                        width:50%;
+                        height: 500px;
                         transition: transform 1s;
                         transform-style: preserve-3d;
                         cursor: pointer;
                         position: relative;
+                        @include phone{
+                                width:100%;
+                                height:400px;
+                        }
                         @include big-desktop{
                                 height:500px;
-                                width: 50%;
+                                width: 33.33%;
                         }
                         &:hover{
                                 -webkit-transform: scale(1.05);
