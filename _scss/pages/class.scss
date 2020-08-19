@@ -149,15 +149,19 @@
                 }
                 header{
                         width:100%;
-                        @include big-desktop{
-                                max-width:1200px !important;
-                        }
-                        @include tablet{
-                                padding:0 100px;
-                                max-width:960px;
-                        }
-                        @include phone{
-                                padding:0 40px;
+                        @include flexbox();
+                        @include justify-content(center);
+                        h2{
+                                @include big-desktop{
+                                        max-width:1000px !important;
+                                }
+                                @include tablet{
+                                        //padding:0 100px;
+                                        max-width:760px;
+                                }
+                                @include phone{
+                                        padding:0 40px;
+                                }
                         }
                 }
                 @include tablet{
