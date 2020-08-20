@@ -77,7 +77,6 @@
         @include flexbox();
         @include flex-direction(column);
         @include align-items(center);
-        padding-bottom:300px;
         >header{
                 width:100%;
                 position:fixed;
@@ -137,6 +136,9 @@
                         @include text_element_padding();
                         text-align: center;
                         margin-bottom:0; //default reset
+                        @include phone{
+                                font-size:24px;
+                        }
                 }
         }
         section{
@@ -160,7 +162,9 @@
                                 max-width:760px;
                         }
                         @include phone{
-                                padding:0 40px;
+                                h2{
+                                        padding:0 40px;
+                                }
                         }
                 }
                 @include tablet{
@@ -262,7 +266,7 @@
                         position: relative;
                         @include phone{
                                 width:100%;
-                                height:400px;
+                                height:300px;
                         }
                         @include big-desktop{
                                 height:500px;
@@ -302,6 +306,11 @@
                                 transition: all 0.5s ease;
                                 z-index: 1000;
                                 line-height: 60px;
+                                @include phone{
+                                        font-size:24px;
+                                        opacity:1;
+                                        background-color:rgba(255,255,255,.5);
+                                }
                         }
                         .card-front,
                         .card-back{
@@ -349,6 +358,10 @@
                                         font-family: sourceSansProLight;
                                         font-size:26px;
                                         line-height: 40px;
+                                        @include phone{
+                                                font-size:16px;
+                                                line-height:30px;
+                                        }
                                 }
                         }
                }
